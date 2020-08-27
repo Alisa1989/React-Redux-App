@@ -1,14 +1,30 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import { getJokes } from '../actions/jokeActions';
 
-const jokeList = () => {
+import SingleJoke from './SingleJoke';
+
+const JokeList = (props) => {
+
     return (
         <div>
-            <p>Something here!</p>
+            <h2>Jokes:</h2>
+            <SingleJoke />
+            <button onClick={getJokes}>Get Jokes!</button>
+            {/* {console.log("state", state)} */}
         </div>
     )
 }
 
+const mapStateToProps = state => {
+    return{
+        joke: state.joke 
+    }
+};
+
+const mapDispatchToProps = {
+    getJokes
+};
 
 
-export default connect(null,null)(jokeList);
+export default connect(mapStateToProps, mapDispatchToProps)(JokeList);
