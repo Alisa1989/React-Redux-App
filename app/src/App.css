@@ -36,3 +36,17 @@
     transform: rotate(360deg);
   }
 }
+
+.jokeList__container{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.singleJoke__container {
+  width: 30%;
+  margin: 1% auto;
+  padding: 1%;
+  background-color: cornflowerblue;
+  border-radius: 15px;
+}

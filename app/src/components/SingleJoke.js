@@ -4,9 +4,9 @@ import { connect } from 'react-redux';
 const SingleJoke = (props) => {
 
     return (
-        <div>
-            <h3>Joke</h3>
-            <h3>Punchline</h3>
+        <div className="singleJoke__container">
+            <h3>Joke: {props.setup}</h3>
+            <h3>Punchline: {props.punchline}</h3>
         </div>
     )
 }

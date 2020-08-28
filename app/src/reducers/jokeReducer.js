@@ -3,7 +3,7 @@ import { FETCH_JOKES_SUCCESS } from '../actions/jokeActions';
 import { FETCH_JOKES_FAIL } from '../actions/jokeActions';
 
 export const initialState = {
-    joke: {setup: "joke from reducer", punchline: "heyoooo"},
+    jokes: [{setup: "joke from reducer", punchline: "heyoooo"}],
     isFetching: false,
     error: ""
 }
@@ -18,7 +18,7 @@ export const jokeReducer = (state = initialState, action) => {
             return {
             ...state,
             isFetching: false,
-            joke: {setup: action.payload.setup, punchline: action.payload.punchline}};
+            jokes: action.payload};
         case FETCH_JOKES_FAIL:
             return {
             ...state,
